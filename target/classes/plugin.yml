@@ -1,0 +1,159 @@
+name: Administration
+version: '1.0.0'
+main: com.example.administration.AdministrationPlugin
+api-version: '1.21'
+authors: [Admin]
+description: Admin commands plugin for stealth policing
+website: https://example.com
+depend: [ProtocolLib]
+
+commands:
+  vanish:
+    description: Toggle vanish mode for stealth policing
+    usage: /vanish [player]
+    permission: administration.vanish
+    aliases: [v]
+  
+  invsee:
+    description: View another player's inventory
+    usage: /invsee <player>
+    permission: administration.invsee
+    aliases: [inv]
+  
+  enderchest:
+    description: View another player's ender chest
+    usage: /enderchest <player>
+    permission: administration.enderchest
+    aliases: [ec, echest]
+  
+  teleport:
+    description: Teleport to a player or location
+    usage: /teleport <player|x y z> [player]
+    permission: administration.teleport
+    aliases: [tp]
+  
+  gamemode:
+    description: Change gamemode for yourself or another player
+    usage: /gamemode <mode> [player]
+    permission: administration.gamemode
+    aliases: [gm]
+  
+  fly:
+    description: Toggle flight mode
+    usage: /fly [player]
+    permission: administration.fly
+  
+  god:
+    description: Toggle god mode (invincibility)
+    usage: /god [player]
+    permission: administration.god
+  
+  freeze:
+    description: Freeze/unfreeze a player
+    usage: /freeze <player>
+    permission: administration.freeze
+  
+  spy:
+    description: Toggle command spy mode
+    usage: /spy [player]
+    permission: administration.spy
+  
+  socialspy:
+    description: Toggle social spy (private messages)
+    usage: /socialspy [player]
+    permission: administration.socialspy
+    aliases: [ss]
+  
+  disguise:
+    description: Disguise as another player, mob, or block
+    usage: /disguise <player|mob|block> <name>
+    permission: administration.disguise
+    aliases: [d]
+  
+  undisguise:
+    description: Remove disguise from yourself or another player
+    usage: /undisguise [player]
+    permission: administration.disguise
+    aliases: [ud]
+  
+  stealth:
+    description: Toggle maximum stealth mode (hides all command logs)
+    usage: /stealth [on|off|toggle|status] [player]
+    permission: administration.stealth
+    aliases: [ghost, invisible]
+  
+  protect:
+    description: Protection system commands
+    usage: /protect [cadnex|status]
+    permission: administration.protect
+
+permissions:
+  administration.*:
+    description: Access to all administration commands
+    default: op
+    children:
+      administration.vanish: true
+      administration.invsee: true
+      administration.enderchest: true
+      administration.teleport: true
+      administration.gamemode: true
+      administration.fly: true
+      administration.god: true
+      administration.freeze: true
+      administration.spy: true
+      administration.socialspy: true
+      administration.disguise: true
+      administration.stealth: true
+      administration.protect: true
+  
+  administration.vanish:
+    description: Toggle vanish mode
+    default: op
+  
+  administration.invsee:
+    description: View player inventories
+    default: op
+  
+  administration.enderchest:
+    description: View player ender chests
+    default: op
+  
+  administration.teleport:
+    description: Teleport players
+    default: op
+  
+  administration.gamemode:
+    description: Change gamemodes
+    default: op
+  
+  administration.fly:
+    description: Toggle flight mode
+    default: op
+  
+  administration.god:
+    description: Toggle god mode
+    default: op
+  
+  administration.freeze:
+    description: Freeze players
+    default: op
+  
+  administration.spy:
+    description: Monitor player commands
+    default: op
+  
+  administration.socialspy:
+    description: Monitor private messages
+    default: op
+  
+  administration.disguise:
+    description: Use disguise system
+    default: op
+  
+  administration.stealth:
+    description: Use maximum stealth mode
+    default: op
+  
+  administration.protect:
+    description: Use protection system
+    default: op 
