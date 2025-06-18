@@ -7,11 +7,13 @@
 /home/andrei/Documents/mc_plugins/Administration/src/main/java/com/example/administration/commands/FreezeCommand.java
 /home/andrei/Documents/mc_plugins/Administration/src/main/java/com/example/administration/commands/InvseeCommand.java
 /home/andrei/Documents/mc_plugins/Administration/src/main/java/com/example/administration/commands/TeleportCommand.java
+/home/andrei/Documents/mc_plugins/Administration/src/main/java/com/example/administration/commands/GlobalFreezeCommand.java
 /home/andrei/Documents/mc_plugins/Administration/src/main/java/com/example/administration/commands/SpyCommand.java
 /home/andrei/Documents/mc_plugins/Administration/src/main/java/com/example/administration/managers/DisguiseManager.java
 /home/andrei/Documents/mc_plugins/Administration/src/main/java/com/example/administration/commands/GodCommand.java
 /home/andrei/Documents/mc_plugins/Administration/src/main/java/com/example/administration/utils/StealthUtils.java
 /home/andrei/Documents/mc_plugins/Administration/src/main/java/com/example/administration/commands/ProtectCommand.java
+/home/andrei/Documents/mc_plugins/Administration/src/main/java/com/example/administration/managers/GlobalFreezeManager.java
 /home/andrei/Documents/mc_plugins/Administration/src/main/java/com/example/administration/commands/VanishCommand.java
 /home/andrei/Documents/mc_plugins/Administration/src/main/java/com/example/administration/listeners/PlayerListener.java
 /home/andrei/Documents/mc_plugins/Administration/src/main/java/com/example/administration/managers/StealthManager.java

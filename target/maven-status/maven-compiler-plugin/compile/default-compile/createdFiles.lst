@@ -17,8 +17,10 @@ com/example/administration/commands/StealthCommand.class
 com/example/administration/commands/VanishCommand.class
 com/example/administration/managers/DisguiseManager$DisguiseType.class
 com/example/administration/managers/DisguiseManager.class
+com/example/administration/commands/GlobalFreezeCommand.class
 com/example/administration/commands/FlyCommand.class
 com/example/administration/commands/DisguiseCommand.class
 com/example/administration/managers/StealthManager.class
 com/example/administration/commands/SpyCommand.class
+com/example/administration/managers/GlobalFreezeManager.class
 com/example/administration/commands/SocialSpyCommand.class
