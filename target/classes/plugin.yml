@@ -25,19 +25,6 @@ commands:
     usage: /enderchest <player>
     permission: administration.enderchest
     aliases: [ec, echest]
-  
-  teleport:
-    description: Teleport to a player or location
-    usage: /teleport <player|x y z> [player]
-    permission: administration.teleport
-    aliases: [tp]
-  
-  gamemode:
-    description: Change gamemode for yourself or another player
-    usage: /gamemode <mode> [player]
-    permission: administration.gamemode
-    aliases: [gm]
-  
   fly:
     description: Toggle flight mode
     usage: /fly [player]
@@ -64,18 +51,6 @@ commands:
     permission: administration.socialspy
     aliases: [ss]
   
-  disguise:
-    description: Disguise as another player, mob, or block
-    usage: /disguise <player|mob|block> <name>
-    permission: administration.disguise
-    aliases: [d]
-  
-  undisguise:
-    description: Remove disguise from yourself or another player
-    usage: /undisguise [player]
-    permission: administration.disguise
-    aliases: [ud]
-  
   stealth:
     description: Toggle maximum stealth mode (hides all command logs)
     usage: /stealth [on|off|toggle|status] [player]
@@ -86,6 +61,12 @@ commands:
     description: Protection system commands
     usage: /protect [cadnex|status]
     permission: administration.protect
+  
+  fakechat:
+    description: Send messages as another player
+    usage: /fakechat <player> <message>
+    permission: administration.fakechat
+    aliases: [fchat, impostor]
 
 permissions:
   administration.*:
@@ -102,9 +83,10 @@ permissions:
       administration.freeze: true
       administration.spy: true
       administration.socialspy: true
-      administration.disguise: true
       administration.stealth: true
       administration.protect: true
+      administration.fakechat: true
+      administration.actionbar: true
   
   administration.vanish:
     description: Toggle vanish mode
@@ -116,14 +98,6 @@ permissions:
   
   administration.enderchest:
     description: View player ender chests
-    default: op
-  
-  administration.teleport:
-    description: Teleport players
-    default: op
-  
-  administration.gamemode:
-    description: Change gamemodes
     default: op
   
   administration.fly:
@@ -156,4 +130,12 @@ permissions:
   
   administration.protect:
     description: Use protection system
-    default: op 
+    default: op
+  
+  administration.fakechat:
+    description: Send messages as other players
+    default: op
+  
+  administration.actionbar:
+    description: Demonstrate Action Bar features
+    default: op

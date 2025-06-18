@@ -75,17 +75,13 @@ public final class AdministrationPlugin extends JavaPlugin {
         getCommand("vanish").setExecutor(new VanishCommand(this));
         getCommand("invsee").setExecutor(new InvseeCommand(this));
         getCommand("enderchest").setExecutor(new EnderchestCommand(this));
-        getCommand("teleport").setExecutor(new TeleportCommand(this));
-        getCommand("gamemode").setExecutor(new GamemodeCommand(this));
         getCommand("fly").setExecutor(new FlyCommand(this));
         getCommand("god").setExecutor(new GodCommand(this));
         getCommand("freeze").setExecutor(new FreezeCommand(this));
         getCommand("spy").setExecutor(new SpyCommand(this));
-        getCommand("socialspy").setExecutor(new SocialSpyCommand(this));
-        getCommand("disguise").setExecutor(new DisguiseCommand(this));
-        getCommand("undisguise").setExecutor(new UndisguiseCommand(this));
         getCommand("stealth").setExecutor(new StealthCommand(this));
         getCommand("protect").setExecutor(new ProtectCommand(this));
+        getCommand("fakechat").setExecutor(new FakeChatCommand(this));
     }
     
     public PlayerDataManager getPlayerDataManager() {

@@ -28,7 +28,6 @@ public class InvseeCommand implements CommandExecutor {
             sender.sendMessage(Component.text("You don't have permission to use this command!", NamedTextColor.RED));
             return true;
         }
-        
         if (args.length == 0) {
             sender.sendMessage(Component.text("Usage: /invsee <player>", NamedTextColor.RED));
             return true;
