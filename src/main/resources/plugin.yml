@@ -67,6 +67,12 @@ commands:
     usage: /fakechat <player> <message>
     permission: administration.fakechat
     aliases: [fchat, impostor]
+  
+  globalfreeze:
+    description: Control global server freeze
+    usage: /globalfreeze <on|off|toggle|status> [reason]
+    permission: administration.globalfreeze
+    aliases: [gfreeze, serverfreeze]
 
 permissions:
   administration.*:
@@ -86,7 +92,7 @@ permissions:
       administration.stealth: true
       administration.protect: true
       administration.fakechat: true
-      administration.actionbar: true
+      administration.globalfreeze: true
   
   administration.vanish:
     description: Toggle vanish mode
@@ -136,6 +142,10 @@ permissions:
     description: Send messages as other players
     default: op
   
-  administration.actionbar:
-    description: Demonstrate Action Bar features
+  administration.globalfreeze:
+    description: Control global server freeze
+    default: op
+  
+  administration.freeze.bypass:
+    description: Bypass global freeze restrictions
     default: op

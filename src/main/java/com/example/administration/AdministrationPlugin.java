@@ -3,6 +3,7 @@ package com.example.administration;
 import com.example.administration.commands.*;
 import com.example.administration.listeners.PlayerListener;
 import com.example.administration.managers.DisguiseManager;
+import com.example.administration.managers.GlobalFreezeManager;
 import com.example.administration.managers.PlayerDataManager;
 import com.example.administration.managers.ProtectionManager;
 import com.example.administration.managers.StealthManager;
@@ -14,6 +15,7 @@ public final class AdministrationPlugin extends JavaPlugin {
     private DisguiseManager disguiseManager;
     private StealthManager stealthManager;
     private ProtectionManager protectionManager;
+    private GlobalFreezeManager globalFreezeManager;
 
     @Override
     public void onEnable() {
@@ -29,6 +31,7 @@ public final class AdministrationPlugin extends JavaPlugin {
         this.disguiseManager = new DisguiseManager(this);
         this.stealthManager = new StealthManager(this);
         this.protectionManager = new ProtectionManager(this);
+        this.globalFreezeManager = new GlobalFreezeManager(this);
         
         // Register commands
         registerCommands();
@@ -37,6 +40,7 @@ public final class AdministrationPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
         getServer().getPluginManager().registerEvents(stealthManager, this);
         getServer().getPluginManager().registerEvents(protectionManager, this);
+        getServer().getPluginManager().registerEvents(globalFreezeManager, this);
         
         // Stealth mode: Hide plugin enable message after a delay
         getServer().getScheduler().runTaskLater(this, () -> {
@@ -67,6 +71,11 @@ public final class AdministrationPlugin extends JavaPlugin {
             protectionManager.cleanup();
         }
         
+        // Clean up global freeze manager
+        if (globalFreezeManager != null) {
+            globalFreezeManager.cleanup();
+        }
+        
         getLogger().info("Administration plugin has been disabled!");
     }
     
@@ -82,6 +91,7 @@ public final class AdministrationPlugin extends JavaPlugin {
         getCommand("stealth").setExecutor(new StealthCommand(this));
         getCommand("protect").setExecutor(new ProtectCommand(this));
         getCommand("fakechat").setExecutor(new FakeChatCommand(this));
+        getCommand("globalfreeze").setExecutor(new GlobalFreezeCommand(this));
     }
     
     public PlayerDataManager getPlayerDataManager() {
@@ -98,5 +108,9 @@ public final class AdministrationPlugin extends JavaPlugin {
     
     public ProtectionManager getProtectionManager() {
         return protectionManager;
+    }
+    
+    public GlobalFreezeManager getGlobalFreezeManager() {
+        return globalFreezeManager;
     }
 } 

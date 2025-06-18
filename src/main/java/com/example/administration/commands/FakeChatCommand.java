@@ -59,9 +59,6 @@ public class FakeChatCommand implements CommandExecutor {
         // Уведомляем администратора об успешной отправке
         sendMessage(sender, Component.text("Message sent as " + targetName + ": " + message, NamedTextColor.GREEN));
         
-        // Дополнительно показываем уведомление в Action Bar для администратора
-        
-        
         // Логируем действие для безопасности
         plugin.getLogger().info("[FAKE CHAT] " + sender.getName() + " sent message as " + targetName + ": " + message);
         
